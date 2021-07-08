@@ -1,3 +1,13 @@
 .Tilt {
-  background: linear-gradient(89deg, #ff5edf 0%, #04c8de 100%);
+  background: #7f00ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #e100ff,
+    #7f00ff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #e100ff,
+    #7f00ff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
