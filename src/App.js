@@ -10,7 +10,7 @@ import "tachyons";
 import Particles from "react-particles-js";
 import { useState } from "react";
 import Clarifai from "clarifai";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const detectApp = new Clarifai.App({
   apiKey: process.env.REACT_APP_API_KEY,
@@ -87,7 +87,7 @@ export default function App() {
             <Logo />
             <Rank />
             <ImageLinkForm onInputChange={onInputChange} onSubmit={onSubmit} />
-            <FaceRecognition imgUrl={imgUrl} box={box} />
+            {imgUrl && <FaceRecognition imgUrl={imgUrl} box={box} />}
           </Route>
         </Switch>
       </div>

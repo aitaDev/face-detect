@@ -5,7 +5,7 @@ import brain from "./brain.png";
 
 export default function Logo() {
   return (
-    <div className="ma4 mt0">
+    <div className="center ma4 mt0">
       <Tilt
         className="Tilt br2 shadow-2"
         options={{ max: 55 }}
