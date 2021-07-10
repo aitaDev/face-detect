@@ -5,7 +5,8 @@ export default function ImageLinkForm({ onInputChange, onSubmit }) {
   return (
     <div className="ma4 mt0">
       <p className="f3 white">
-        This magic brain will detect faces in your pictures, Give it a try!
+        This app will identify the celebrity in the picture you provide it, Give
+        it a try!
       </p>
       <div className="center">
         <div className="center form pa4 br3 shadow-5">
