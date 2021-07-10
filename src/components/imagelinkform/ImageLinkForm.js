@@ -4,7 +4,7 @@ import "./imagelinkform.css";
 export default function ImageLinkForm({ onInputChange, onSubmit }) {
   return (
     <div className="ma4 mt0">
-      <p className="f3">
+      <p className="f3 white">
         This magic brain will detect faces in your pictures, Give it a try!
       </p>
       <div className="center">

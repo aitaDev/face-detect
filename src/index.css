@@ -6,16 +6,18 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background: #ef32d9; /* fallback for old browsers */
+  background: #03001e; /* fallback for old browsers */
   background: -webkit-linear-gradient(
-    to left,
-    #89fffd,
-    #ef32d9
+    to right,
+    #ec38bc,
+    #7303c0,
+    #03001e
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
-    to left,
-    #89fffd,
-    #ef32d9
+    to right,
+    #ec38bc,
+    #7303c0,
+    #03001e
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 

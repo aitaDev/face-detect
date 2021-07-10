@@ -36,10 +36,12 @@ export default function App() {
   const [imgUrl, setImgUrl] = useState("");
   const [box, setBox] = useState({});
   const [signedIn, setSignedIn] = useState(false);
+  const [name, setName] = useState("");
 
   const calculateFaceLocation = (data) => {
     const clarifaiFace =
       data.outputs[0].data.regions[0].region_info.bounding_box;
+    setName(data.outputs[0].data.regions[0].data.concepts[0].name);
     const image = document.getElementById("inputImage");
     const width = Number(image.width);
     const height = Number(image.height);
@@ -63,7 +65,7 @@ export default function App() {
     setImgUrl(input);
 
     detectApp.models
-      .predict(Clarifai.FACE_DETECT_MODEL, input)
+      .predict(Clarifai.CELEBRITY_MODEL, input)
       .then((response) => displayFaceBox(calculateFaceLocation(response)))
       .catch((err) => console.log(err));
   };
@@ -85,9 +87,11 @@ export default function App() {
           </Route>
           <Route path="/">
             <Logo />
-            <Rank />
+            {/* <Rank /> */}
             <ImageLinkForm onInputChange={onInputChange} onSubmit={onSubmit} />
-            {imgUrl && <FaceRecognition imgUrl={imgUrl} box={box} />}
+            {imgUrl && (
+              <FaceRecognition imgUrl={imgUrl} box={box} name={name} />
+            )}
           </Route>
         </Switch>
       </div>
